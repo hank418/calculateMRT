@@ -44,10 +44,11 @@ def main():
 
         
 def get_workdays(year, month, ):
+    holidays = 0
     current_month_records = []
     for x in range(INDEXOF2020,len(date_records)-1):
         record = date_records[x]
-        if f"{year}/{month}/" in record['date']:
+        if f"{year}/{month}/" in record['date'] and record['isHoliday'] == "是" and record['name'] != "軍人節":
             current_month_records.append(record)
     return monthrange(year, month)[1]-len(current_month_records)
 
