@@ -44,7 +44,6 @@ def main():
 
         
 def get_workdays(year, month, ):
-    holidays = 0
     current_month_records = []
     for x in range(INDEXOF2020,len(date_records)-1):
         record = date_records[x]
